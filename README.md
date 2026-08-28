@@ -10,3 +10,4 @@ Producto
 
 Notas:
 Un producto puede debe tener exclusivamente una categoria.
+Incluir 20 funcionalidades
