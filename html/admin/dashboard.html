@@ -1,0 +1,341 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heros Games - Panel de Administración</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Proyecto---Marcos-de-desarrollo-web/css/admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex flex-column flex-md-row">
+
+        <!-- Topbar móvil: solo visible debajo de md, con botón hamburguesa -->
+        <div class="d-flex d-md-none justify-content-between align-items-center bg-dark-custom text-white p-3">
+            <span class="text-accent fst-italic fs-5">Hero Games</span>
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                &#9776;
+            </button>
+        </div>
+
+        <!-- Sidebar en escritorio (visible desde md) -->
+        <nav class="bg-dark-custom text-light p-3 d-none d-md-flex flex-column sidebar-desktop">
+            <div class="text-center mb-4">
+                <h4 class="text-accent fst-italic mb-0">Hero Games</h4>
+                <small class="text-secondary">Admin Panel</small>
+            </div>
+            <ul class="nav nav-pills flex-column gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="compras.html">Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="reportes.html">Reportes</a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-4">
+                <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
+            </div>
+            
+        </nav>
+
+        <!-- Sidebar en móvil (offcanvas) -->
+        <div class="offcanvas offcanvas-start bg-dark-custom text-light d-md-none" tabindex="-1" id="sidebarMenu">
+            <div class="offcanvas-header">
+                <h5 class="text-accent fst-italic mb-0">Hero Games</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <ul class="nav nav-pills flex-column gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="compras.html">Compras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+                <div class="mt-auto pt-4">
+                    <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-grow-1">
+
+            <div class="p-3 p-md-4">
+
+                <h3 class="mb-4 fs-4 fs-md-3">Dashboard Principal</h3>
+
+                <!-- Stat cards -->
+                <div class="row g-3 mb-4">
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    12
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">12</h3>
+                                    <small class="text-secondary">Compras Hoy</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    45
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">45</h3>
+                                    <small class="text-secondary">Compras Semanal</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    S/
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">S/ 58,500</h3>
+                                    <small class="text-secondary">Ingresos Mes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    8
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">8</h3>
+                                    <small class="text-secondary">Clientes Nuevos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Acciones rápidas -->
+                <div class="card shadow-sm p-4">
+                    <h5 class="mb-3">Acciones Rápidas</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn bg-accent text-white px-4 rounded-pill">Nueva Compra</button>
+                        <button class="btn bg-accent text-white px-4 rounded-pill">Agregar Cliente</button>
+                        <button class="btn bg-accent text-white px-4 rounded-pill">Ver Reportes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+=======
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relax Total - Panel de Administración</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Proyecto---Marcos-de-desarrollo-web/css/admin.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex flex-column flex-md-row">
+
+        <!-- Topbar móvil: solo visible debajo de md, con botón hamburguesa -->
+        <div class="d-flex d-md-none justify-content-between align-items-center bg-dark-custom text-white p-3">
+            <span class="text-accent fst-italic fs-5">Hero Games</span>
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                &#9776;
+            </button>
+        </div>
+
+        <!-- Sidebar en escritorio (visible desde md) -->
+        <nav class="bg-dark-custom text-light p-3 d-none d-md-flex flex-column sidebar-desktop">
+            <div class="text-center mb-4">
+                <h4 class="text-accent fst-italic mb-0">Hero Games</h4>
+                <small class="text-secondary">Admin Panel</small>
+            </div>
+            <ul class="nav nav-pills flex-column gap-1">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="compras.html">Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="reportes.html">Reportes</a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-4">
+                <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
+            </div>
+            
+        </nav>
+
+        <!-- Sidebar en móvil (offcanvas) -->
+        <div class="offcanvas offcanvas-start bg-dark-custom text-light d-md-none" tabindex="-1" id="sidebarMenu">
+            <div class="offcanvas-header">
+                <h5 class="text-accent fst-italic mb-0">Hero Games</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <ul class="nav nav-pills flex-column gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="compras.html">Compras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+                <div class="mt-auto pt-4">
+                    <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-grow-1">
+
+            <div class="p-3 p-md-4">
+
+                <h3 class="mb-4 fs-4 fs-md-3">Dashboard Principal</h3>
+
+                <!-- Stat cards -->
+                <div class="row g-3 mb-4">
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    12
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">12</h3>
+                                    <small class="text-secondary">Compras Hoy</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    45
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">45</h3>
+                                    <small class="text-secondary">Compras Semanal</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    S/
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">S/ 58,500</h3>
+                                    <small class="text-secondary">Ingresos Mes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    8
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">8</h3>
+                                    <small class="text-secondary">Clientes Nuevos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Acciones rápidas -->
+                <div class="card shadow-sm p-4">
+                    <h5 class="mb-3">Acciones Rápidas</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn bg-accent text-white px-4 rounded-pill">Nueva Compra</button>
+                        <button class="btn bg-accent text-white px-4 rounded-pill">Agregar Cliente</button>
+                        <button class="btn bg-accent text-white px-4 rounded-pill">Ver Reportes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+>>>>>>> 9cb708baff4b77d18be72e4938e314288893b888
+</html>>

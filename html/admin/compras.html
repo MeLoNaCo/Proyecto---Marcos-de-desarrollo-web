@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Games - Productos</title>
+    <title>Hero Games - Compras</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="/Proyecto---Marcos-de-desarrollo-web/css/compras.css" rel="stylesheet">
 </head>
@@ -32,16 +32,16 @@
                     <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="compras.html">Compras</a>
+                    <a class="nav-link active text-white" href="compras.html">Compras</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="clientes.html">Clientes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-white" href="productos.html">Productos</a>
+                    <a class="nav-link text-light" href="productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Reportes</a>
+                    <a class="nav-link text-light" href="reportes.html">Reportes</a>
                 </li>
             </ul>
             <div class="mt-auto pt-4">
@@ -61,13 +61,13 @@
                         <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="compras.html">Compras</a>
+                        <a class="nav-link active text-white" href="compras.html">Compras</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="clientes.html">Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" href="productos.html">Productos</a>
+                        <a class="nav-link text-light" href="productos.html">Productos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="reportes.html">Reportes</a>
@@ -85,8 +85,8 @@
             <div class="p-3 p-md-4">
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="mb-0 fs-4 fs-md-3">Productos</h3>
-                    <button class="btn bg-accent text-white rounded-pill px-4">Agregar Producto</button>
+                    <h3 class="mb-0 fs-4 fs-md-3">Compras</h3>
+                    <button class="btn bg-accent text-white rounded-pill px-4">Nueva Compra</button>
                 </div>
 
                 <!-- Vista de tabla: visible desde md en adelante -->
@@ -95,66 +95,53 @@
                         <table class="table table-hover align-middle mb-0">
                             <thead class="table-light">
                                 <tr>
-                                    <th>Código</th>
-                                    <th>Nombre</th>
-                                    <th>Categoría</th>
-                                    <th>Precio</th>
-                                    <th>Stock</th>
+                                    <th>N° Orden</th>
+                                    <th>Cliente</th>
+                                    <th>Fecha</th>
+                                    <th>Monto</th>
                                     <th>Estado</th>
                                     <th class="text-end">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#P001</td>
-                                    <td>Mouse Gamer RGB</td>
-                                    <td>Periféricos</td>
-                                    <td>S/ 89.90</td>
-                                    <td>32</td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
+                                    <td>#0001</td>
+                                    <td>María Gonzáles</td>
+                                    <td>28/08/2026</td>
+                                    <td>S/ 120.00</td>
+                                    <td><span class="badge bg-success">Pagado</span></td>
                                     <td class="text-end">
                                         <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>#P002</td>
-                                    <td>Teclado Mecánico 60%</td>
-                                    <td>Periféricos</td>
-                                    <td>S/ 159.00</td>
-                                    <td>18</td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
+                                    <td>#0002</td>
+                                    <td>Jorge Ramírez</td>
+                                    <td>29/08/2026</td>
+                                    <td>S/ 85.00</td>
+                                    <td><span class="badge bg-warning text-dark">Pendiente</span></td>
                                     <td class="text-end">
                                         <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>#P003</td>
-                                    <td>Tarjeta Gráfica RTX 4060</td>
-                                    <td>Componentes</td>
-                                    <td>S/ 1,450.00</td>
-                                    <td>0</td>
-                                    <td><span class="badge bg-danger">Agotado</span></td>
+                                    <td>#0003</td>
+                                    <td>Lucía Fernández</td>
+                                    <td>29/08/2026</td>
+                                    <td>S/ 200.00</td>
+                                    <td><span class="badge bg-danger">Cancelado</span></td>
                                     <td class="text-end">
                                         <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>#P004</td>
-                                    <td>Memoria RAM 16GB DDR4</td>
-                                    <td>Componentes</td>
-                                    <td>S/ 220.00</td>
-                                    <td>45</td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
+                                    <td>#0004</td>
+                                    <td>Andrés Vega</td>
+                                    <td>30/08/2026</td>
+                                    <td>S/ 150.00</td>
+                                    <td><span class="badge bg-success">Pagado</span></td>
                                     <td class="text-end">
                                         <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -167,62 +154,42 @@
 
                     <div class="card shadow-sm p-3 mb-3">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P001 - Mouse Gamer RGB</h6>
-                            <span class="badge bg-success">Disponible</span>
+                            <h6 class="mb-0">#0001 - María Gonzáles</h6>
+                            <span class="badge bg-success">Pagado</span>
                         </div>
-                        <p class="mb-1 text-secondary small">Categoría: Periféricos</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 89.90</p>
-                        <p class="mb-3 text-secondary small">Stock: 32</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
+                        <p class="mb-1 text-secondary small">Fecha: 28/08/2026</p>
+                        <p class="mb-3 text-secondary small">Monto: S/ 120.00</p>
+                        <a href="#" class="btn btn-sm btn-outline-secondary w-100">Ver</a>
                     </div>
 
                     <div class="card shadow-sm p-3 mb-3">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P002 - Teclado Mecánico 60%</h6>
-                            <span class="badge bg-success">Disponible</span>
+                            <h6 class="mb-0">#0002 - Jorge Ramírez</h6>
+                            <span class="badge bg-warning text-dark">Pendiente</span>
                         </div>
-                        <p class="mb-1 text-secondary small">Categoría: Periféricos</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 159.00</p>
-                        <p class="mb-3 text-secondary small">Stock: 18</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
+                        <p class="mb-1 text-secondary small">Fecha: 29/08/2026</p>
+                        <p class="mb-3 text-secondary small">Monto: S/ 85.00</p>
+                        <a href="#" class="btn btn-sm btn-outline-secondary w-100">Ver</a>
                     </div>
 
                     <div class="card shadow-sm p-3 mb-3">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P003 - Tarjeta Gráfica RTX 4060</h6>
-                            <span class="badge bg-danger">Agotado</span>
+                            <h6 class="mb-0">#0003 - Lucía Fernández</h6>
+                            <span class="badge bg-danger">Cancelado</span>
                         </div>
-                        <p class="mb-1 text-secondary small">Categoría: Componentes</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 1,450.00</p>
-                        <p class="mb-3 text-secondary small">Stock: 0</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
+                        <p class="mb-1 text-secondary small">Fecha: 29/08/2026</p>
+                        <p class="mb-3 text-secondary small">Monto: S/ 200.00</p>
+                        <a href="#" class="btn btn-sm btn-outline-secondary w-100">Ver</a>
                     </div>
 
                     <div class="card shadow-sm p-3 mb-3">
                         <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P004 - Memoria RAM 16GB DDR4</h6>
-                            <span class="badge bg-success">Disponible</span>
+                            <h6 class="mb-0">#0004 - Andrés Vega</h6>
+                            <span class="badge bg-success">Pagado</span>
                         </div>
-                        <p class="mb-1 text-secondary small">Categoría: Componentes</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 220.00</p>
-                        <p class="mb-3 text-secondary small">Stock: 45</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
+                        <p class="mb-1 text-secondary small">Fecha: 30/08/2026</p>
+                        <p class="mb-3 text-secondary small">Monto: S/ 150.00</p>
+                        <a href="#" class="btn btn-sm btn-outline-secondary w-100">Ver</a>
                     </div>
 
                 </div>
@@ -234,7 +201,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-    
 </body>
-
 </html>
