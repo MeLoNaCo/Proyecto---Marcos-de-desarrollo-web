@@ -1,6 +1,12 @@
 # Proyecto: Sistema De Ventas De Artículos Electrónicos Hero Games
 
-Repositorio para los avances del curso de **Marco de Desarrollo Web**
+## Integrantes
+
+- Cabanillas Romero, Erick (U22233099)
+- Garay Llaja, Leonardo Luis (U23324618)
+- Magariño Raymondi, Kevin Sebastián (U21315770)
+- Ortiz Gonzales, Derek Valentin (U22209547)
+- Vivanco Mercado, Jose Maria Joel (U23257537)
 
 ## Descripción
 
@@ -27,14 +33,6 @@ El proyecto se encuentra en el **Avance 1: Diseño e interfaces frontend**. Actu
 
 Para visualizar las interfaces actuales, abrir el archivo `index.html` en un navegador web.
 
-## Integrantes
-
-- Cabanillas Romero, Erick (U22233099)
-- Garay Llaja, Leonardo Luis (U23324618)
-- Magariño Raymondi, Kevin Sebastián (U21315770)
-- Ortiz Gonzales, Derek Valentin (U22209547)
-- Vivanco Mercado, Jose Maria Joel (U23257537)
-
 ## Avance 1: Diseño e interfaces frontend
 En este primer avance se incluye el diseño y la implementación de las interfaces frontend:
 * Documentación inicial del proyecto (Puntos 5.1 al 5.6).
@@ -52,7 +50,38 @@ El proyecto se desarrollará como un **monorepo**. El frontend estará integrado
 
 ## Estructura de carpetas
 
-La estructura objetivo del monorepo será la siguiente:
+### Avance 1: estructura actual
+
+En este avance, las interfaces se mantienen en la raíz para poder abrir directamente `index.html`:
+
+```text
+Proyecto---Marcos-de-desarrollo-web/
+├── index.html                 # Landing principal
+├── html/
+│   ├── login.html             # Inicio de sesión
+│   ├── registro.html          # Registro de usuarios
+│   ├── catalogo.html          # Listado, búsqueda y filtros de productos
+│   ├── producto-detalle.html  # Información de un producto
+│   ├── carrito.html           # Productos seleccionados para comprar
+│   ├── checkout.html          # Confirmación y datos del pedido
+│   ├── pago-resultado.html    # Resultado del proceso de pago
+│   ├── admin/
+│   │   ├── dashboard.html     # Resumen del panel administrativo
+│   │   ├── productos.html     # CRUD visual de productos
+│   │   ├── ventas.html        # Consulta de ventas totales
+│   │   ├── usuarios.html      # Consulta de usuarios activos
+│   │   └── reporte-stock.html  # Reporte y control de stock
+│   └── error/
+│       ├── 404.html           # Página para recursos no encontrados
+│       └── 500.html           # Página para errores internos
+├── css/
+│   └── estilos.css            # Estilos propios
+└── README.md
+```
+
+### Siguientes avances: estructura Spring Boot
+
+Cuando se integre Spring Boot, la estructura objetivo del monorepo será la siguiente:
 
 ```text
 Proyecto---Marcos-de-desarrollo-web/
@@ -66,7 +95,7 @@ Proyecto---Marcos-de-desarrollo-web/
 │       │       ├── repositorio/
 │       │       ├── entidad/
 │       │       └── dto/
-│       └── resources/                    # Avance 1: vistas y recursos del frontend
+│       └── resources/                    # Siguientes avances: vistas y recursos Spring Boot
 │           ├── templates/
 │           │   ├── index.html             # Landing principal
 │           │   ├── login.html             # Inicio de sesión
@@ -100,8 +129,8 @@ Proyecto---Marcos-de-desarrollo-web/
 
 ### Distribución por avances
 
-- **Avance 1:** diseño e implementación de las interfaces frontend en HTML5, CSS3 y Bootstrap, organizadas en `resources`.
-- **Siguientes avances:** integración funcional con Spring Boot y Thymeleaf, controladores, servicios, repositorios, entidades y funcionalidades del sistema.
+- **Avance 1:** diseño e implementación de todas las interfaces frontend en HTML5, CSS3 y Bootstrap, organizadas en `html/` y `css/`.
+- **Siguientes avances:** migración de las vistas a `resources/templates`, integración funcional con Spring Boot y Thymeleaf, además de controladores, servicios, repositorios, entidades y funcionalidades del sistema.
 
 ## Próximos avances
 
