@@ -8,6 +8,14 @@
 - Ortiz Gonzales, Derek Valentin (U22209547)
 - Vivanco Mercado, Jose Maria Joel (U23257537)
 
+## Integrantes
+
+- Cabanillas Romero, Erick (U22233099)
+- Garay Llaja, Leonardo Luis (U23324618)
+- Magariño Raymondi, Kevin Sebastián (U21315770)
+- Ortiz Gonzales, Derek Valentin (U22209547)
+- Vivanco Mercado, Jose Maria Joel (U23257537)
+
 ## Descripción
 
 **Hero Games** será un sistema web para la venta de artículos electrónicos. Permitirá a los clientes consultar productos, gestionar un carrito y realizar compras; además, contará con un panel administrativo para controlar productos, ventas, usuarios y stock.
@@ -32,6 +40,7 @@ El proyecto se encuentra en el **Avance 1: Diseño e interfaces frontend**. Actu
 ## Ejecución de las interfaces
 
 Para visualizar las interfaces actuales, abrir el archivo `index.html` en un navegador web.
+
 
 ## Avance 1: Diseño e interfaces frontend
 En este primer avance se incluye el diseño y la implementación de las interfaces frontend:
