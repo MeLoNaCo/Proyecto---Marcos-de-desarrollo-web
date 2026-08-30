@@ -70,8 +70,8 @@ Proyecto---Marcos-de-desarrollo-web/
 │   │   ├── dashboard.html     # Resumen del panel administrativo
 │   │   ├── productos.html     # CRUD visual de productos
 │   │   ├── ventas.html        # Consulta de ventas totales
-│   │   ├── usuarios.html      # Consulta de usuarios activos
-│   │   └── reporte-stock.html  # Reporte y control de stock
+│   │   ├── clientes.html      # Consulta de usuarios activos
+│   │   └── reportes.html      # Reporte y control de stock
 │   └── error/
 │       ├── 404.html           # Página para recursos no encontrados
 │       └── 500.html           # Página para errores internos

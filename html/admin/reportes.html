@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Games - Reportes</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Proyecto---Marcos-de-desarrollo-web/css/compras.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="d-flex flex-column flex-md-row">
+
+        <!-- Topbar móvil: solo visible debajo de md, con botón hamburguesa -->
+        <div class="d-flex d-md-none justify-content-between align-items-center bg-dark-custom text-white p-3">
+            <span class="text-accent fst-italic fs-5">Hero Games</span>
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+                &#9776;
+            </button>
+        </div>
+
+        <!-- Sidebar en escritorio (visible desde md) -->
+        <nav class="bg-dark-custom text-light p-3 d-none d-md-flex flex-column sidebar-desktop">
+            <div class="text-center mb-4">
+                <h4 class="text-accent fst-italic mb-0">Hero Games</h4>
+                <small class="text-secondary">Admin Panel</small>
+            </div>
+            <ul class="nav nav-pills flex-column gap-1">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="compras.html">Compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white" href="reportes.html">Reportes</a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-4">
+                <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
+            </div>
+        </nav>
+
+        <!-- Sidebar en móvil (offcanvas) -->
+        <div class="offcanvas offcanvas-start bg-dark-custom text-light d-md-none" tabindex="-1" id="sidebarMenu">
+            <div class="offcanvas-header">
+                <h5 class="text-accent fst-italic mb-0">Hero Games</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column">
+                <ul class="nav nav-pills flex-column gap-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="compras.html">Compras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="clientes.html">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" href="reportes.html">Reportes</a>
+                    </li>
+                </ul>
+                <div class="mt-auto pt-4">
+                    <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex-grow-1">
+
+            <div class="p-3 p-md-4">
+
+                <h3 class="mb-4 fs-4 fs-md-3">Reportes Generales</h3>
+
+                <!-- Resumen de ventas -->
+                <div class="row g-3 mb-4">
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    S/
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">S/ 12,340</h3>
+                                    <small class="text-secondary">Ventas del Mes</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    86
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">86</h3>
+                                    <small class="text-secondary">Órdenes Totales</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    23
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">23</h3>
+                                    <small class="text-secondary">Clientes Nuevos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                        <div class="card shadow-sm p-3 h-100">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="icon-circle bg-accent text-white d-flex align-items-center justify-content-center">
+                                    S/
+                                </div>
+                                <div>
+                                    <h3 class="mb-0">S/ 143.50</h3>
+                                    <small class="text-secondary">Ticket Promedio</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Ventas por categoría -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="mb-3">Ventas por Categoría</h5>
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Categoría</th>
+                                        <th>Unidades Vendidas</th>
+                                        <th>Ingresos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Componentes</td>
+                                        <td>140</td>
+                                        <td>S/ 7,820.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Periféricos</td>
+                                        <td>95</td>
+                                        <td>S/ 3,410.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Accesorios</td>
+                                        <td>60</td>
+                                        <td>S/ 1,110.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Productos más vendidos -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="mb-3">Productos Más Vendidos</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Memoria RAM 16GB DDR4
+                                <span class="badge bg-accent text-white rounded-pill">58 unidades</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Mouse Gamer RGB
+                                <span class="badge bg-accent text-white rounded-pill">44 unidades</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Teclado Mecánico 60%
+                                <span class="badge bg-accent text-white rounded-pill">31 unidades</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
