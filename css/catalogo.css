@@ -1,40 +1,38 @@
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-producto {
-  transition:
-    transform 0.2s ease-in-out,
-    border-color 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 .card-producto:hover {
-  transform: translateY(-4px);
-  border-color: var(--bs-info) !important;
+    transform: translateY(-4px);
+    border-color: var(--bs-info) !important;
 }
 
 .card-img-producto {
-  height: 180px;
-  object-fit: cover;
+    height: 180px;
+    object-fit: cover;
 }
 
 .nav-pills .nav-link {
-  color: var(--bs-light);
-  border: 1px solid var(--bs-secondary);
-  transition: all 0.2s ease;
+    color: var(--bs-light);
+    border: 1px solid var(--bs-secondary);
+    transition: all 0.2s ease;
 }
 
 .nav-pills .nav-link:hover {
-  background-color: rgba(13, 202, 240, 0.1);
-  color: var(--bs-info);
-  border-color: var(--bs-info);
+    background-color: rgba(13, 202, 240, 0.1);
+    color: var(--bs-info);
+    border-color: var(--bs-info);
 }
 
 .nav-pills .nav-link.active {
-  background-color: var(--bs-info);
-  color: #000;
-  font-weight: 600;
-  border-color: var(--bs-info);
+    background-color: var(--bs-info);
+    color: #000;
+    font-weight: 600;
+    border-color: var(--bs-info);
 }

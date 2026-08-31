@@ -1,449 +1,311 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Hero Games</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="../css/catalogo.css" />
-  </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+</head>
 
-  <body>
+<body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">
-            <img
-              src="../img/Herogameslogo.png"
-              alt="Logo"
-              width="50"
-              height="40"
-            />
-            Hero Games
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="catalogo.html"
-                  >Catálogo</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="publicidad.html">Publicidad</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">Acerca de</a>
-              </li>
-            </ul>
-            <div class="d-flex gap-3 fs-5">
-              <a href="carrito.html" class="link-secondary"
-                ><i class="bi bi-cart"></i
-              ></a>
-              <a href="login.html" class="link-secondary"
-                ><i class="bi bi-person"></i
-              ></a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/Herogameslogo.png" alt="Bootstrap" width="60" height="48">
+                    HeroGames
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publicidad.html">Publicidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Acerca de</a>
+                        </li>
+                    </ul>
+
+                    <div class="Derecha d-flex gap-4 fs-3">
+                        <a href="#" class="link-secondary" aria-label="Carrito">
+                            <i class="bi bi-cart"></i>
+                        </a>
+                        <a href="login.html" class="link-secondary" aria-label="Login">
+                            <i class="bi bi-person"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </nav>
+        </nav>
     </header>
 
     <main class="container my-4">
-      <h1 class="h2 text-start text-light mb-4">Catálogo de Productos</h1>
-      <div id="avisoAplicacion" class="d-none" role="status"></div>
+        <h1 class="h2 text-start text-light mb-4">Catálogo de Productos</h1>
 
-      <div class="row g-4">
-        <aside class="col-lg-3">
-          <div class="card bg-body-tertiary border-secondary p-3">
-            <form class="mb-4" onsubmit="return false;">
-              <div class="mb-3">
-                <label for="inputBuscar" class="form-label fw-bold text-light"
-                  >Buscar producto</label
-                >
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inputBuscar"
-                    placeholder="Nombre..."
-                  />
-                  <button class="btn btn-primary" type="button">
-                    <i class="bi bi-search"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
+        <div class="row g-4">
+            <aside class="col-lg-3">
+                <div class="card bg-body-tertiary border-secondary p-3">
 
-            <div>
-              <label class="form-label fw-bold text-light mb-2"
-                >Categorías</label
-              >
-              <div
-                class="nav flex-column nav-pills gap-2"
-                id="v-pills-tab"
-                role="tablist"
-              >
-                <button
-                  class="nav-link active text-start"
-                  data-bs-toggle="pill"
-                  data-bs-target="#cat-todos"
-                  type="button"
-                  role="tab"
-                >
-                  Todos los productos
-                </button>
-                <button
-                  class="nav-link text-start"
-                  data-bs-toggle="pill"
-                  data-bs-target="#cat-laptops"
-                  type="button"
-                  role="tab"
-                >
-                  Laptops
-                </button>
-                <button
-                  class="nav-link text-start"
-                  data-bs-toggle="pill"
-                  data-bs-target="#cat-perifericos"
-                  type="button"
-                  role="tab"
-                >
-                  Periféricos
-                </button>
-                <button
-                  class="nav-link text-start"
-                  data-bs-toggle="pill"
-                  data-bs-target="#cat-monitores"
-                  type="button"
-                  role="tab"
-                >
-                  Monitores
-                </button>
-              </div>
-            </div>
-          </div>
-        </aside>
+                    <form class="mb-4" onsubmit="return false;">
+                        <div class="mb-3">
+                            <label for="inputBuscar" class="form-label fw-bold text-light">Buscar producto</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="inputBuscar" placeholder="Nombre...">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
 
-        <section class="col-lg-9">
-          <div class="tab-content" id="v-pills-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="cat-todos"
-              role="tabpanel"
-            >
-              <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-                <div class="col item-tarjeta">
-                  <div
-                    class="card card-producto h-100 bg-dark text-light border-secondary"
-                  >
-                    <img
-                      src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg"
-                      class="card-img-top card-img-producto"
-                      alt="Laptop"
-                    />
-                    <div class="card-body d-flex flex-column">
-                      <span class="badge bg-secondary mb-2 align-self-start"
-                        >Laptops</span
-                      >
-                      <h5 class="card-title text-info titulo-prod">
-                        Laptop Gamer RTX
-                      </h5>
-                      <p class="card-text text-secondary">
-                        Intel Core i7 con 16GB de RAM y SSD 1TB.
-                      </p>
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-auto"
-                      >
-                        <span class="fw-bold text-success fs-5">$1199.99</span>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modalDetalle"
-                        >
-                          Ver Detalle
-                        </button>
-                      </div>
+                    <div>
+                        <label class="form-label fw-bold text-light mb-2">Categorías</label>
+                        <div class="nav flex-column nav-pills gap-2" id="v-pills-tab" role="tablist">
+                            <button class="nav-link active text-start" data-bs-toggle="pill" data-bs-target="#cat-todos"
+                                type="button" role="tab">
+                                Todos los productos
+                            </button>
+                            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#cat-laptops"
+                                type="button" role="tab">
+                                Laptops
+                            </button>
+                            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#cat-perifericos"
+                                type="button" role="tab">
+                                Periféricos
+                            </button>
+                            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#cat-monitores"
+                                type="button" role="tab">
+                                Monitores
+                            </button>
+                        </div>
                     </div>
-                  </div>
-                </div>
 
-                <div class="col item-tarjeta">
-                  <div
-                    class="card card-producto h-100 bg-dark text-light border-secondary"
-                  >
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
-                      class="card-img-top card-img-producto"
-                      alt="Mouse"
-                    />
-                    <div class="card-body d-flex flex-column">
-                      <span class="badge bg-secondary mb-2 align-self-start"
-                        >Periféricos</span
-                      >
-                      <h5 class="card-title text-info titulo-prod">
-                        Mouse Gamer RGB
-                      </h5>
-                      <p class="card-text text-secondary">
-                        Sensor óptico de 12,000 DPI.
-                      </p>
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-auto"
-                      >
-                        <span class="fw-bold text-success fs-5">$9.99</span>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modalDetalle"
-                        >
-                          Ver Detalle
-                        </button>
-                      </div>
-                    </div>
-                  </div>
                 </div>
+            </aside>
 
-                <div class="col item-tarjeta">
-                  <div
-                    class="card card-producto h-100 bg-dark text-light border-secondary"
-                  >
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
-                      class="card-img-top card-img-producto"
-                      alt="Monitor"
-                    />
-                    <div class="card-body d-flex flex-column">
-                      <span class="badge bg-secondary mb-2 align-self-start"
-                        >Monitores</span
-                      >
-                      <h5 class="card-title text-info titulo-prod">
-                        Monitor Gamer 144Hz
-                      </h5>
-                      <p class="card-text text-secondary">
-                        Panel IPS Full HD con 1ms de respuesta.
-                      </p>
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-auto"
-                      >
-                        <span class="fw-bold text-success fs-5">$159.99</span>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modalDetalle"
-                        >
-                          Ver Detalle
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <section class="col-lg-9">
+                <div class="tab-content" id="v-pills-tabContent">
 
-            <div class="tab-pane fade" id="cat-laptops" role="tabpanel">
-              <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-                <div class="col item-tarjeta">
-                  <div
-                    class="card card-producto h-100 bg-dark text-light border-secondary"
-                  >
-                    <img
-                      src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg"
-                      class="card-img-top card-img-producto"
-                      alt="Laptop"
-                    />
-                    <div class="card-body d-flex flex-column">
-                      <span class="badge bg-secondary mb-2 align-self-start"
-                        >Laptops</span
-                      >
-                      <h5 class="card-title text-info titulo-prod">
-                        Laptop Gamer RTX
-                      </h5>
-                      <p class="card-text text-secondary">
-                        Intel Core i7 con 16GB de RAM.
-                      </p>
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-auto"
-                      >
-                        <span class="fw-bold text-success fs-5">$1199.99</span>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modalDetalle"
-                        >
-                          Ver Detalle
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                    <div class="tab-pane fade show active" id="cat-todos" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 
-            <div class="tab-pane fade" id="cat-perifericos" role="tabpanel">
-              <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-                <div class="col item-tarjeta">
-                  <div
-                    class="card card-producto h-100 bg-dark text-light border-secondary"
-                  >
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
-                      class="card-img-top card-img-producto"
-                      alt="Mouse"
-                    />
-                    <div class="card-body d-flex flex-column">
-                      <span class="badge bg-secondary mb-2 align-self-start"
-                        >Periféricos</span
-                      >
-                      <h5 class="card-title text-info titulo-prod">
-                        Mouse Gamer RGB
-                      </h5>
-                      <p class="card-text text-secondary">
-                        Sensor óptico de 12,000 DPI.
-                      </p>
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-auto"
-                      >
-                        <span class="fw-bold text-success fs-5">$9.99</span>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modalDetalle"
-                        >
-                          Ver Detalle
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                            <div class="col item-tarjeta">
+                                <div class="card card-producto h-100 bg-dark text-light border-secondary">
+                                    <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg"
+                                        class="card-img-top card-img-producto" alt="Laptop">
+                                    <div class="card-body d-flex flex-column">
+                                        <span class="badge bg-secondary mb-2 align-self-start">Laptops</span>
+                                        <h5 class="card-title text-info titulo-prod">Laptop Gamer RTX</h5>
+                                        <p class="card-text text-secondary">Intel Core i7 con 16GB de RAM y SSD 1TB.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <span class="fw-bold text-success fs-5">$1199.99</span>
+                                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetalle">
+                                                Ver Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            <div class="tab-pane fade" id="cat-monitores" role="tabpanel">
-              <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-                <div class="col item-tarjeta">
-                  <div
-                    class="card card-producto h-100 bg-dark text-light border-secondary"
-                  >
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
-                      class="card-img-top card-img-producto"
-                      alt="Monitor"
-                    />
-                    <div class="card-body d-flex flex-column">
-                      <span class="badge bg-secondary mb-2 align-self-start"
-                        >Monitores</span
-                      >
-                      <h5 class="card-title text-info titulo-prod">
-                        Monitor Gamer 144Hz
-                      </h5>
-                      <p class="card-text text-secondary">
-                        Panel IPS Full HD con 1ms.
-                      </p>
-                      <div
-                        class="d-flex justify-content-between align-items-center mt-auto"
-                      >
-                        <span class="fw-bold text-success fs-5">$159.99</span>
-                        <button
-                          type="button"
-                          class="btn btn-sm btn-primary"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modalDetalle"
-                        >
-                          Ver Detalle
-                        </button>
-                      </div>
+                            <div class="col item-tarjeta">
+                                <div class="card card-producto h-100 bg-dark text-light border-secondary">
+                                    <img src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
+                                        class="card-img-top card-img-producto" alt="Mouse">
+                                    <div class="card-body d-flex flex-column">
+                                        <span class="badge bg-secondary mb-2 align-self-start">Periféricos</span>
+                                        <h5 class="card-title text-info titulo-prod">Mouse Gamer RGB</h5>
+                                        <p class="card-text text-secondary">Sensor óptico de 12,000 DPI.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <span class="fw-bold text-success fs-5">$9.99</span>
+                                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetalle">
+                                                Ver Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col item-tarjeta">
+                                <div class="card card-producto h-100 bg-dark text-light border-secondary">
+                                    <img src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
+                                        class="card-img-top card-img-producto" alt="Monitor">
+                                    <div class="card-body d-flex flex-column">
+                                        <span class="badge bg-secondary mb-2 align-self-start">Monitores</span>
+                                        <h5 class="card-title text-info titulo-prod">Monitor Gamer 144Hz</h5>
+                                        <p class="card-text text-secondary">Panel IPS Full HD con 1ms de respuesta.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <span class="fw-bold text-success fs-5">$159.99</span>
+                                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetalle">
+                                                Ver Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
+
+                    <div class="tab-pane fade" id="cat-laptops" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                            <div class="col item-tarjeta">
+                                <div class="card card-producto h-100 bg-dark text-light border-secondary">
+                                    <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg"
+                                        class="card-img-top card-img-producto" alt="Laptop">
+                                    <div class="card-body d-flex flex-column">
+                                        <span class="badge bg-secondary mb-2 align-self-start">Laptops</span>
+                                        <h5 class="card-title text-info titulo-prod">Laptop Gamer RTX</h5>
+                                        <p class="card-text text-secondary">Intel Core i7 con 16GB de RAM.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <span class="fw-bold text-success fs-5">$1199.99</span>
+                                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetalle">
+                                                Ver Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="cat-perifericos" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                            <div class="col item-tarjeta">
+                                <div class="card card-producto h-100 bg-dark text-light border-secondary">
+                                    <img src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
+                                        class="card-img-top card-img-producto" alt="Mouse">
+                                    <div class="card-body d-flex flex-column">
+                                        <span class="badge bg-secondary mb-2 align-self-start">Periféricos</span>
+                                        <h5 class="card-title text-info titulo-prod">Mouse Gamer RGB</h5>
+                                        <p class="card-text text-secondary">Sensor óptico de 12,000 DPI.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <span class="fw-bold text-success fs-5">$9.99</span>
+                                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetalle">
+                                                Ver Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="cat-monitores" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+                            <div class="col item-tarjeta">
+                                <div class="card card-producto h-100 bg-dark text-light border-secondary">
+                                    <img src="https://cdn.pixabay.com/photo/2015/03/21/19/27/pc-684125_1280.jpg"
+                                        class="card-img-top card-img-producto" alt="Monitor">
+                                    <div class="card-body d-flex flex-column">
+                                        <span class="badge bg-secondary mb-2 align-self-start">Monitores</span>
+                                        <h5 class="card-title text-info titulo-prod">Monitor Gamer 144Hz</h5>
+                                        <p class="card-text text-secondary">Panel IPS Full HD con 1ms.</p>
+                                        <div class="d-flex justify-content-between align-items-center mt-auto">
+                                            <span class="fw-bold text-success fs-5">$159.99</span>
+                                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#modalDetalle">
+                                                Ver Detalle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+            </section>
+        </div>
     </main>
 
-    <div
-      class="modal fade"
-      id="modalDetalle"
-      tabindex="-1"
-      aria-labelledby="modalDetalleLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content bg-dark text-light border-secondary">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalDetalleLabel">
-              Detalle del Producto
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="modal"
-              aria-label="Cerrar"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p class="lead">
-              Especificaciones técnicas completas del artículo seleccionado.
-            </p>
-            <p class="text-secondary small">
-              Garantía oficial de 12 meses y envío seguro a nivel nacional.
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <a href="carrito.html" class="btn btn-success"
-              >Agregar al carrito</a
-            >
-          </div>
+    <div class="modal fade" id="modalDetalle" tabindex="-1" aria-labelledby="modalDetalleLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light border-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalDetalleLabel">Detalle del Producto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Especificaciones técnicas completas del artículo seleccionado.</p>
+                    <p class="text-secondary small">Garantía oficial de 12 meses y envío seguro a nivel nacional.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="carrito.html" class="btn btn-success">Agregar al carrito</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <footer
-      class="bg-body-tertiary text-secondary py-4 mt-auto border-top border-secondary-subtle"
-    >
-      <div class="container text-center">
-        <p class="small mb-0">
-          &copy; 2026 Hero Games. Todos los derechos reservados.
-        </p>
-      </div>
+    <footer class="bg-body-tertiary text-secondary py-4 mt-auto border-top border-secondary-subtle">
+        <div class="container">
+            <div class="row gy-3 align-items-center">
+
+                <div class="col-md-4 text-center text-md-start">
+                    <a href="../index.html"
+                        class="text-white text-decoration-none fw-bold d-inline-flex align-items-center gap-2 mb-1">
+                        <img src="../img/Herogameslogo.png" alt="Logo" width="48" height="40">
+                        Hero Games
+                    </a>
+                    <p class="small mb-0 text-secondary">&copy; 2026 Hero Games. Todos los derechos reservados.</p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item me-3">
+                            <a href="../index.html" class="link-secondary text-decoration-none small">Privacidad</a>
+                        </li>
+                        <li class="list-inline-item me-3">
+                            <a href="#" class="link-secondary text-decoration-none small">Términos</a>
+                        </li>
+                        <li class="list-inline-item me-3">
+                            <a href="/html/contact.html" class="link-secondary text-decoration-none small">Contacto</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="link-secondary text-decoration-none small">Soporte</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="d-inline-flex gap-3 fs-5">
+                        <a href="https://x.com" target="_blank" class="link-secondary" aria-label="X (Twitter)">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="link-secondary" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com" target="_blank" class="link-secondary" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="link-secondary" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/funciones.js"></script>
     <script src="../js/catalogo.js"></script>
-  </body>
+</body>
+
 </html>
