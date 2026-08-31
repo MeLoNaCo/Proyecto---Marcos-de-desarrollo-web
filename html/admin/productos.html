@@ -1,240 +1,125 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Games - Productos</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Proyecto---Marcos-de-desarrollo-web/css/compras.css" rel="stylesheet">
-</head>
-
-<body class="bg-light">
-
-    <div class="d-flex flex-column flex-md-row">
-
-        <!-- Topbar móvil: solo visible debajo de md, con botón hamburguesa -->
-        <div class="d-flex d-md-none justify-content-between align-items-center bg-dark-custom text-white p-3">
-            <span class="text-accent fst-italic fs-5">Hero Games</span>
-            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
-                &#9776;
-            </button>
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Productos - Panel de administración</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../css/admin.css" />
+  </head>
+  <body class="bg-light">
+    <div class="d-flex flex-column flex-md-row min-vh-100">
+      <nav
+        class="bg-dark-custom text-light p-3 d-flex flex-column sidebar-desktop"
+      >
+        <h4 class="text-accent fst-italic text-center mb-4">Hero Games</h4>
+        <small class="text-secondary text-center mb-3"
+          >Panel de administración</small
+        >
+        <ul class="nav nav-pills flex-column gap-1">
+          <li>
+            <a class="nav-link text-light" href="dashboard.html">Resumen</a>
+          </li>
+          <li>
+            <a class="nav-link text-light" href="compras.html">Compras</a>
+          </li>
+          <li>
+            <a class="nav-link text-light" href="clientes.html">Clientes</a>
+          </li>
+          <li>
+            <a class="nav-link active text-white" href="productos.html"
+              >Productos</a
+            >
+          </li>
+          <li>
+            <a class="nav-link text-light" href="reportes.html">Reportes</a>
+          </li>
+        </ul>
+        <a href="../../index.html" class="btn btn-outline-danger w-100 mt-auto"
+          >Cerrar sesión</a
+        >
+      </nav>
+      <main class="flex-grow-1 p-3 p-md-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="h3">Gestión de productos</h1>
+          <a href="../../index.html" class="btn btn-outline-secondary"
+            >Ver tienda</a
+          >
         </div>
-
-        <!-- Sidebar en escritorio (visible desde md) -->
-        <nav class="bg-dark-custom text-light p-3 d-none d-md-flex flex-column sidebar-desktop">
-            <div class="text-center mb-4">
-                <h4 class="text-accent fst-italic mb-0">Hero Games</h4>
-                <small class="text-secondary">Admin Panel</small>
+        <div class="row g-4">
+          <section class="col-lg-4">
+            <form id="formularioProducto" class="card p-4 text-dark">
+              <h2 class="h5">Nuevo producto</h2>
+              <input type="hidden" id="productoId" /><label
+                for="productoNombre"
+                class="form-label mt-3"
+                >Nombre</label
+              ><input id="productoNombre" class="form-control" required /><label
+                for="productoDescripcion"
+                class="form-label mt-3"
+                >Descripción</label
+              ><textarea
+                id="productoDescripcion"
+                class="form-control"
+                required
+              ></textarea
+              ><label for="productoPrecio" class="form-label mt-3">Precio</label
+              ><input
+                id="productoPrecio"
+                type="number"
+                min="0"
+                step="0.01"
+                class="form-control"
+                required
+              /><label for="productoCategoria" class="form-label mt-3"
+                >Categoría</label
+              ><select
+                id="productoCategoria"
+                class="form-select"
+                required
+              ></select
+              ><label for="productoStock" class="form-label mt-3">Stock</label
+              ><input
+                id="productoStock"
+                type="number"
+                min="0"
+                class="form-control"
+                required
+              />
+              <div class="d-flex gap-2 mt-4">
+                <button class="btn btn-primary" type="submit">Guardar</button
+                ><button
+                  class="btn btn-secondary"
+                  type="button"
+                  id="cancelarEdicion"
+                >
+                  Cancelar
+                </button>
+              </div>
+            </form>
+          </section>
+          <section class="col-lg-8">
+            <div class="table-responsive card">
+              <table class="table table-dark table-striped align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tablaProductos"></tbody>
+              </table>
             </div>
-            <ul class="nav nav-pills flex-column gap-1">
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="compras.html">Compras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="clientes.html">Clientes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-white" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-light" href="#">Reportes</a>
-                </li>
-            </ul>
-            <div class="mt-auto pt-4">
-                <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
-            </div>
-        </nav>
-
-        <!-- Sidebar en móvil (offcanvas) -->
-        <div class="offcanvas offcanvas-start bg-dark-custom text-light d-md-none" tabindex="-1" id="sidebarMenu">
-            <div class="offcanvas-header">
-                <h5 class="text-accent fst-italic mb-0">Hero Games</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-            </div>
-            <div class="offcanvas-body d-flex flex-column">
-                <ul class="nav nav-pills flex-column gap-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="dashboard.html">Dashboard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="compras.html">Compras</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="clientes.html">Clientes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" href="productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="reportes.html">Reportes</a>
-                    </li>
-                </ul>
-                <div class="mt-auto pt-4">
-                    <a href="/Proyecto---Marcos-de-desarrollo-web/index.html" class="btn btn-outline-danger w-100">Cerrar Sesión</a>
-                </div>
-            </div>
+          </section>
         </div>
-
-        <!-- Main content -->
-        <div class="flex-grow-1">
-
-            <div class="p-3 p-md-4">
-
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="mb-0 fs-4 fs-md-3">Productos</h3>
-                    <button class="btn bg-accent text-white rounded-pill px-4">Agregar Producto</button>
-                </div>
-
-                <!-- Vista de tabla: visible desde md en adelante -->
-                <div class="card shadow-sm d-none d-md-block">
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Código</th>
-                                    <th>Nombre</th>
-                                    <th>Categoría</th>
-                                    <th>Precio</th>
-                                    <th>Stock</th>
-                                    <th>Estado</th>
-                                    <th class="text-end">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#P001</td>
-                                    <td>Mouse Gamer RGB</td>
-                                    <td>Periféricos</td>
-                                    <td>S/ 89.90</td>
-                                    <td>32</td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>#P002</td>
-                                    <td>Teclado Mecánico 60%</td>
-                                    <td>Periféricos</td>
-                                    <td>S/ 159.00</td>
-                                    <td>18</td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>#P003</td>
-                                    <td>Tarjeta Gráfica RTX 4060</td>
-                                    <td>Componentes</td>
-                                    <td>S/ 1,450.00</td>
-                                    <td>0</td>
-                                    <td><span class="badge bg-danger">Agotado</span></td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>#P004</td>
-                                    <td>Memoria RAM 16GB DDR4</td>
-                                    <td>Componentes</td>
-                                    <td>S/ 220.00</td>
-                                    <td>45</td>
-                                    <td><span class="badge bg-success">Disponible</span></td>
-                                    <td class="text-end">
-                                        <a href="#" class="btn btn-sm btn-outline-secondary">Ver</a>
-                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
-                                        <a href="#" class="btn btn-sm btn-outline-danger">Eliminar</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Vista de tarjetas: visible solo en móvil -->
-                <div class="d-md-none">
-
-                    <div class="card shadow-sm p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P001 - Mouse Gamer RGB</h6>
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <p class="mb-1 text-secondary small">Categoría: Periféricos</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 89.90</p>
-                        <p class="mb-3 text-secondary small">Stock: 32</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
-                    </div>
-
-                    <div class="card shadow-sm p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P002 - Teclado Mecánico 60%</h6>
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <p class="mb-1 text-secondary small">Categoría: Periféricos</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 159.00</p>
-                        <p class="mb-3 text-secondary small">Stock: 18</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
-                    </div>
-
-                    <div class="card shadow-sm p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P003 - Tarjeta Gráfica RTX 4060</h6>
-                            <span class="badge bg-danger">Agotado</span>
-                        </div>
-                        <p class="mb-1 text-secondary small">Categoría: Componentes</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 1,450.00</p>
-                        <p class="mb-3 text-secondary small">Stock: 0</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
-                    </div>
-
-                    <div class="card shadow-sm p-3 mb-3">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h6 class="mb-0">#P004 - Memoria RAM 16GB DDR4</h6>
-                            <span class="badge bg-success">Disponible</span>
-                        </div>
-                        <p class="mb-1 text-secondary small">Categoría: Componentes</p>
-                        <p class="mb-1 text-secondary small">Precio: S/ 220.00</p>
-                        <p class="mb-3 text-secondary small">Stock: 45</p>
-                        <div class="d-flex gap-2">
-                            <a href="#" class="btn btn-sm btn-outline-secondary flex-fill">Ver</a>
-                            <a href="#" class="btn btn-sm btn-outline-primary flex-fill">Editar</a>
-                            <a href="#" class="btn btn-sm btn-outline-danger flex-fill">Eliminar</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
+      </main>
     </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-
-    
-</body>
-
+    <script src="../../js/funciones.js"></script>
+  </body>
 </html>

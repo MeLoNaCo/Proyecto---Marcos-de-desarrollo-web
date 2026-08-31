@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resultado del pago - Hero Games</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Hero Games</a
+        ><a href="catalogo.html" class="btn btn-outline-info">Catálogo</a>
+      </div>
+    </nav>
+    <main class="container text-center my-auto">
+      <div class="card bg-dark border-success p-5">
+        <h1 class="text-success">¡Pedido confirmado!</h1>
+        <p class="lead">Tu pago fue simulado correctamente.</p>
+        <p id="numeroPedido" class="text-info"></p>
+        <a href="catalogo.html" class="btn btn-primary mt-3"
+          >Volver al catálogo</a
+        >
+      </div>
+    </main>
+    <footer class="bg-body-tertiary text-secondary py-4 text-center">
+      <small>&copy; 2026 Hero Games. Todos los derechos reservados.</small>
+    </footer>
+    <script>
+      const pedido = JSON.parse(
+        localStorage.getItem("hg_last_order") || "null",
+      );
+      document.getElementById("numeroPedido").textContent = pedido
+        ? `Número de pedido: ${pedido.id}`
+        : "No hay un pedido reciente.";
+    </script>
+  </body>
+</html>
