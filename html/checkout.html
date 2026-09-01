@@ -51,22 +51,21 @@
 
 
     <main class="container my-5 flex-grow-1">
+                        <!-- loguito de la tarjetita -->
         <h1 class="mb-4 text-info fw-bold"><i class="bi bi-credit-card"></i> Finalizar Compra</h1>
 
         <div class="row g-4">
-
-            <div class="col-lg-7">
-                <div class="card border-secondary shadow p-4">
+            <div class="col-lg-8">
+                
+                <div class="card border-secondary shadow p-4 mb-4">
                     <h4 class="text-light mb-3">1. Datos de Envío</h4>
                     <div class="mb-3">
                         <label class="form-label text-secondary">Nombre y Apellido</label>
-                        <input type="text" class="form-control bg-dark text-white border-secondary"
-                            placeholder="Ej. Joel Vivanco">
+                        <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Ej. Joel Vivanco">
                     </div>
                     <div class="mb-3">
                         <label class="form-label text-secondary">Dirección de Entrega</label>
-                        <input type="text" class="form-control bg-dark text-white border-secondary"
-                            placeholder="Av. Principal 123, Puente Piedra">
+                        <input type="text" class="form-control bg-dark text-white border-secondary" placeholder="Av. Principal 123, Puente Piedra">
                     </div>
 
                     <h4 class="text-light mt-4 mb-3">2. Método de Pago</h4>
@@ -76,15 +75,54 @@
                     </div>
                     <div class="form-check mb-2">
                         <input class="form-check-input" type="radio" name="metodoPago" id="billetera">
-                        <label class="form-check-label text-secondary" for="billetera">Yape / Plin /
-                            Transferencia</label>
+                        <label class="form-check-label text-secondary" for="billetera">Yape / Plin / Transferencia</label>
                     </div>
-        
                 </div>
+
+                <!-- recomendaciones seccion -->
+                <div class="mt-4">
+                    <h4 class="text-light mb-3">RECOMENDACIONES PARA TI</h4>
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <!-- p1 -->
+                        <div class="col">
+                            <div class="card h-100 border-secondary bg-dark shadow-sm">
+                                <img src="https://cdn.pixabay.com/photo/2023/01/05/06/27/retro-7698195_1280.jpg" class="card-img-top" alt="Mouse" style="height: 120px; object-fit: cover;">
+                                <div class="card-body p-2 d-flex flex-column">
+                                    <h6 class="card-title text-info fs-6 mb-1">Mouse Gamer RGB</h6>
+                                    <p class="card-text text-light small mt-auto fw-bold">S/ 120.00</p>
+                                    <button class="btn btn-outline-info btn-sm mt-2">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- p2 -->
+                        <div class="col">
+                            <div class="card h-100 border-secondary bg-dark shadow-sm">
+                                <img src="https://cdn.pixabay.com/photo/2023/01/05/06/27/retro-7698195_1280.jpg" class="card-img-top" alt="Teclado" style="height: 120px; object-fit: cover;">
+                                <div class="card-body p-2 d-flex flex-column">
+                                    <h6 class="card-title text-info fs-6 mb-1">Teclado Mecánico</h6>
+                                    <p class="card-text text-light small mt-auto fw-bold">S/ 250.00</p>
+                                    <button class="btn btn-outline-info btn-sm mt-2">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- p3 -->
+                        <div class="col">
+                            <div class="card h-100 border-secondary bg-dark shadow-sm">
+                                <img src="https://cdn.pixabay.com/photo/2023/01/05/06/27/retro-7698195_1280.jpg" class="card-img-top" alt="Audífonos" style="height: 120px; object-fit: cover;">
+                                <div class="card-body p-2 d-flex flex-column">
+                                    <h6 class="card-title text-info fs-6 mb-1">Audífonos 7.1</h6>
+                                    <p class="card-text text-light small mt-auto fw-bold">S/ 180.00</p>
+                                    <button class="btn btn-outline-info btn-sm mt-2">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="col-lg-5">
-                <div class="card border-secondary shadow p-4">
+            <div class="col-lg-4">
+                <div class="card border-secondary shadow p-4 sticky-top" style="top: 20px;">
                     <h4 class="text-info mb-3">Tu Pedido</h4>
                     <div class="d-flex justify-content-between text-secondary mb-2">
                         <span>Monitor Gamer 144Hz (x1)</span>
